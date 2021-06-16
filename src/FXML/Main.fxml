@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="965.0" style="-fx-background-color: #313131;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <children>
+      <ImageView fx:id="img_orderpizza" fitHeight="253.0" fitWidth="271.0" layoutX="68.0" layoutY="210.0" onMouseClicked="#orderPizza_click" pickOnBounds="true" preserveRatio="true" styleClass="order-pizza">
+         <image>
+            <Image url="@../images/order-pizza.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="253.0" fitWidth="271.0" layoutX="367.0" layoutY="210.0" onMouseClicked="#click_orderStatus" pickOnBounds="true" preserveRatio="true" styleClass="help-center">
+         <image>
+            <Image url="@../images/order-status.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="253.0" fitWidth="271.0" layoutX="656.0" layoutY="210.0" onMouseClicked="#click_userInfo" pickOnBounds="true" preserveRatio="true" styleClass="user-info">
+         <image>
+            <Image url="@../images/kisisel-bilgiler.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="42.0" layoutX="860.0" layoutY="20.0" onMouseClicked="#click_logout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logout.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txt_orderPizza" layoutX="123.0" layoutY="491.0" onMouseClicked="#orderPizzaText_click" text="Pizza Siparişi" textFill="#e44c4c">
+         <font>
+            <Font name="Verdana Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="411.0" layoutY="491.0" onMouseClicked="#click_orderStatusText" text="Sipariş Takibi" textFill="#e44c4c">
+         <font>
+            <Font name="Verdana Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="676.0" layoutY="491.0" onMouseClicked="#click_userInfoText" text="Kullanıcı Bilgileri" textFill="#e44c4c">
+         <font>
+            <Font name="Verdana Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="278.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pizzalogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="428.0" layoutY="64.0" prefHeight="114.0" prefWidth="282.0" text="House" textFill="#ff3333">
+         <font>
+            <Font name="Verdana Bold" size="80.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

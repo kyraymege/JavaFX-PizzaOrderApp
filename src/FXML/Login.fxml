@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #313131, #515151 );" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <ImageView fitHeight="111.0" fitWidth="141.0" layoutX="188.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pizzalogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="197.0" layoutY="166.0" text="Giriş">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9736841917037964" green="0.28849902749061584" blue="0.28849902749061584" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7105262875556946" green="0.08881578594446182" blue="0.019736841320991516" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <PasswordField id="txt_password" fx:id="txt_password" layoutX="131.0" layoutY="291.0" prefHeight="25.0" prefWidth="238.0" promptText="Password" />
+      <TextField id="txt_email" fx:id="txt_email" layoutX="131.0" layoutY="238.0" prefHeight="25.0" prefWidth="238.0" promptText="E-mail">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextField>
+      <Button id="btn_loginn" fx:id="btn_clickLogin" layoutX="178.0" layoutY="347.0" mnemonicParsing="false" onAction="#btn_login" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: white; -fx-background-radius: 50;" text="Giriş Yap" textFill="#ee5f5f">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="161.0" layoutY="412.0" prefHeight="20.0" prefWidth="179.0" text="Hesabınız yok mu?" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_register" layoutX="104.0" layoutY="435.0" onMouseClicked="#lbl_click" prefHeight="25.0" prefWidth="292.0" text="Hemen bir hesap oluşturun!" textFill="#d34f4f">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

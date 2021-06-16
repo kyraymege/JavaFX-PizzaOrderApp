@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #313131;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterController">
+   <children>
+      <TextField fx:id="txt_email" layoutX="136.0" layoutY="279.0" prefHeight="25.0" prefWidth="229.0" promptText="E-mail">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txt_address" layoutX="136.0" layoutY="369.0" prefHeight="25.0" prefWidth="229.0" promptText="Address">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></TextField>
+      <Label layoutX="170.0" layoutY="158.0" prefHeight="25.0" prefWidth="160.0" text="Kayıt Ol">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.780952380952381" endY="0.9380952380952381" startY="0.1523809523809524">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9473684430122375" green="0.3434210419654846" blue="0.2368421107530594" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7105262875556946" green="0.0690789446234703" blue="0.0690789446234703" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fitHeight="118.0" fitWidth="114.0" layoutX="194.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pizzalogo.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="txt_password" layoutX="136.0" layoutY="326.0" prefHeight="25.0" prefWidth="229.0" promptText="Password">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="txt_name" layoutX="136.0" layoutY="238.0" prefHeight="25.0" prefWidth="229.0" promptText="Name, Surname" />
+      <Button layoutX="167.0" layoutY="421.0" mnemonicParsing="false" onAction="#btn_signup" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: white; -fx-background-radius: 50;" styleClass="singupButton" stylesheets="@styles.css" text="Kayıt Ol" textFill="#e45a5a">
+         <font>
+            <Font name="Verdana Bold" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="img_back" fitHeight="114.0" fitWidth="82.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#img_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

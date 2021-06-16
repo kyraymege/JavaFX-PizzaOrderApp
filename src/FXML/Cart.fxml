@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #313131, #515151 );" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CartController">
+   <children>
+      <Label layoutX="317.0" layoutY="25.0" text="Sepetim" textFill="#da5f5f">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbl_cart" layoutX="64.0" layoutY="84.0" prefHeight="294.0" prefWidth="686.0" styleClass="shadow" stylesheets="@styles.css">
+        <columns>
+          <TableColumn fx:id="col_pizzaName" prefWidth="75.0" text="Pizza İsmi" />
+          <TableColumn fx:id="col_pizzaUnit" prefWidth="75.0" text="Pizza Adedi" />
+            <TableColumn fx:id="col_pizzaPrice" prefWidth="75.0" text="Pizza Fiyatı (1x)" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="36.0" layoutY="609.0" mnemonicParsing="false" onAction="#btn_goShopping" prefHeight="35.0" prefWidth="225.0" style="-fx-background-color: white; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@styles.css" text="Alışverişe Devam Et" textFill="#da5f5f">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="568.0" layoutY="609.0" mnemonicParsing="false" onAction="#btn_buy" prefHeight="35.0" prefWidth="182.0" style="-fx-background-color: white; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@styles.css" text="Satın Al" textFill="#da5f5f">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmb_odeme" layoutX="524.0" layoutY="547.0" prefWidth="150.0" promptText="Ödeme Türü" style="-fx-background-color: white; -fx-background-radius: 10;" styleClass="shadow" stylesheets="@styles.css" />
+      <Label layoutX="36.0" layoutY="414.0" text="Toplam :" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_totalPrice" layoutX="131.0" layoutY="414.0" prefHeight="23.0" prefWidth="80.0" text="0" textFill="#da5f5f">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txt_orderNote" layoutX="415.0" layoutY="414.0" prefHeight="99.0" prefWidth="322.0" styleClass="shadow" stylesheets="@styles.css" />
+      <Label layoutX="267.0" layoutY="414.0" text="Sipariş Notu :" textFill="WHITE">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_totalPrice1" layoutX="223.0" layoutY="414.0" prefHeight="23.0" prefWidth="23.0" text="Tl" textFill="#da5f5f">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="324.0" layoutY="609.0" mnemonicParsing="false" onAction="#btn_dropCart" prefHeight="35.0" prefWidth="182.0" style="-fx-background-color: white; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@styles.css" text="Sepeti Boşalt" textFill="#da5f5f">
+         <font>
+            <Font name="Verdana Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

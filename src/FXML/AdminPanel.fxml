@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminPanelController">
+   <children>
+      <BorderPane layoutX="121.0" layoutY="181.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox alignment="TOP_CENTER" prefHeight="640.0" prefWidth="235.0" style="-fx-background-color: #515151;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="244.0" prefWidth="235.0">
+                     <children>
+                        <ImageView fitHeight="52.0" fitWidth="51.0" layoutX="171.0" layoutY="14.0" onMouseClicked="#click_logout" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <ComboBox fx:id="cmb_status" prefHeight="42.0" prefWidth="181.0" promptText="Sipariş Durumunu Seçiniz" style="-fx-background-color: white; -fx-background-radius: 30;" styleClass="shadow" stylesheets="@styles.css">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" onAction="#btn_updateStatus" prefHeight="47.0" prefWidth="149.0" style="-fx-background-color: white; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@styles.css" text="Durumu Güncelle">
+                     <font>
+                        <Font name="Verdana Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Separator maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="160.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Button mnemonicParsing="false" onAction="#btn_showInfo" style="-fx-background-color: white; -fx-background-radius: 50;" styleClass="shadow" stylesheets="@styles.css" text="Bilgileri Kontrol et">
+                     <font>
+                        <Font name="Verdana Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </right>
+         <center>
+            <AnchorPane prefHeight="531.0" prefWidth="746.0" style="-fx-background-color: #313131;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tbl_admin" layoutX="22.0" layoutY="120.0" prefHeight="493.0" prefWidth="921.0">
+                    <columns>
+                        <TableColumn fx:id="col_orderID" prefWidth="65.0" text="Sipariş ID" />
+                      <TableColumn fx:id="col_order" prefWidth="219.0" text="Sipariş" />
+                      <TableColumn fx:id="col_orderAdress" prefWidth="128.0" text="Sipariş Adresi" />
+                        <TableColumn fx:id="col_orderPayment" minWidth="0.0" prefWidth="126.0" text="Sipariş Ödeme Türü" />
+                        <TableColumn fx:id="col_orderTotalPrice" minWidth="2.0" prefWidth="139.0" text="Sipariş Toplam Fiyatı" />
+                        <TableColumn fx:id="col_orderNote" minWidth="0.0" prefWidth="140.0" text="Sipariş Notu" />
+                        <TableColumn fx:id="col_orderStatus" prefWidth="103.0" text="Sipariş Durumu" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="290.0" layoutY="27.0" text="Admin Panel" textFill="#ee5656">
+                     <font>
+                        <Font name="Verdana Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
